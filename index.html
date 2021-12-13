@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculador de IMC</h1>
+
+    Ingrese peso: <input type="text" id="n1" name="n1" ><br>
+    Ingrese altura: <input type="text" id="n2" name="n2" ><br>
+
+    <button type="button" onclick="nota()">Resultado de tu IMC</button>
+    
+    
+    <p id="res"></p>
+
+
+
+    <script type="text/javascript">
+        
+    
+        function nota(){
+            let n1= document.getElementById("n1").value;
+            let n2= document.getElementById("n2").value;
+            
+            let nn1= parseFloat(n1,10);
+            let nn2= parseFloat(n2,10);
+        
+            let promedio= nn1/(nn2*nn2);
+            alert(promedio);
+
+            if(promedio<18.5){
+                res="Peso inferior al normal";
+            }else if(promedio>18.5 && promedio<24.9){
+                res="Peso dentro de lo normal";
+            }else if (promedio>25 && promedio && 29.9){
+                res="Peso mayor al normal";
+            }else if(promedio>30){
+                res="Estado de obesidad";
+            }
+            promedio=res2;
+            document.getElementById("res").innerHTML=res;
+            
+            
+        }
+    </script>
+</body>
+</html>
